@@ -7,8 +7,7 @@ public class Principal extends javax.swing.JFrame {
     String apellidos[] = new String[10];
     String direcciones[] = new String[10];
     String telefonos[] = new String[10];
-    String fechasnac[] = new String[10];
-
+    String fechaNac[] = new String[10];
     
     public Principal() {
         initComponents();
@@ -265,8 +264,8 @@ public class Principal extends javax.swing.JFrame {
         String indice = txtIndice.getText();
         int indi = Integer.parseInt(indice);
         
-        if(indi > 0){
-            indi = indi-1;
+        if (indi>0){
+            indi--;
             indice = String.valueOf(indi);
             txtIndice.setText(indice);
             
@@ -275,14 +274,11 @@ public class Principal extends javax.swing.JFrame {
             txtApellido.setText(apellidos[indi]);
             txtDireccion.setText(direcciones[indi]);
             txtTel.setText(telefonos[indi]);
-            txtFechaNac.setText(fechasnac[indi]);
-
+            txtFechaNac.setText(fechaNac[indi]);
         }
-
     }//GEN-LAST:event_btnAtrasActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-        
         String indice = txtIndice.getText();
         int indi = Integer.parseInt(indice);
         
@@ -291,8 +287,7 @@ public class Principal extends javax.swing.JFrame {
         apellidos[indi] = txtApellido.getText();
         direcciones[indi] = txtDireccion.getText();
         telefonos[indi] = txtTel.getText();
-        fechasnac[indi] = txtFechaNac.getText();
-
+        fechaNac[indi] = txtFechaNac.getText();
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void btnAdelanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdelanteActionPerformed
@@ -300,8 +295,8 @@ public class Principal extends javax.swing.JFrame {
         String indice = txtIndice.getText();
         int indi = Integer.parseInt(indice);
         
-        if(indi < 9){
-            indi = indi+1;
+        if (indi < 9){
+            indi++;
             indice = String.valueOf(indi);
             txtIndice.setText(indice);
             
@@ -310,15 +305,13 @@ public class Principal extends javax.swing.JFrame {
             txtApellido.setText(apellidos[indi]);
             txtDireccion.setText(direcciones[indi]);
             txtTel.setText(telefonos[indi]);
-            txtFechaNac.setText(fechasnac[indi]);
+            txtFechaNac.setText(fechaNac[indi]);
         }
     }//GEN-LAST:event_btnAdelanteActionPerformed
 
     private void txtIndiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIndiceActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtIndiceActionPerformed
-
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdelante;
